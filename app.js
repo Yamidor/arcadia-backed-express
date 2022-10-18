@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use('/api', apiRouter);
+const PORT = process.env.PORT || 3000
 
-app.listen(3000, (req, res) => {
-     console.log('Servidor corriendo...')
+app.listen(PORT, (req, res) => {
+     console.log('Servidor corriendo...', PORT)
 })
